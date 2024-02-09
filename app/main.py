@@ -1,14 +1,14 @@
 # import urllib
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from api.todo_items import router as todo_router
-from api.users import router as user_router
-from services.users import UserServices
-from models import todo
-from dependencies.auth import create_access_token
-from dependencies.database import engine, SessionLocal, get_db
+from app.api.todo_items import router as todo_router
+from app.api.users import router as user_router
+from app.services.users import UserServices
+from app.models import todo
+from app.dependencies.auth import create_access_token
+from app.dependencies.database import engine, SessionLocal, get_db
 # from fastapi_sso.sso.google import GoogleSSO
-from schemas.user import Email
+from app.schemas.user import Email
 
 todo.BaseModel.metadata.create_all(bind=engine)
 
