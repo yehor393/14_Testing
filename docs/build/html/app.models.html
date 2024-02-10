@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.models package &#8212; fastapi 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.repositories package" href="app.repositories.html" />
+    <link rel="prev" title="app.dependencies package" href="app.dependencies.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.repositories.html" title="app.repositories package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.dependencies.html" title="app.dependencies package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.models package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="app-models-package">
+<h1>app.models package<a class="headerlink" href="#app-models-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-app.models.base">
+<span id="app-models-base-module"></span><h2>app.models.base module<a class="headerlink" href="#module-app.models.base" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.models.base.BaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.models.base.</span></span><span class="sig-name descname"><span class="pre">BaseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.base.BaseModel" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.base.BaseModel.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Column(None,</span> <span class="pre">Integer(),</span> <span class="pre">table=None,</span> <span class="pre">primary_key=True,</span> <span class="pre">nullable=False)</span></em><a class="headerlink" href="#app.models.base.BaseModel.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.models.todo">
+<span id="app-models-todo-module"></span><h2>app.models.todo module<a class="headerlink" href="#module-app.models.todo" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.models.todo.</span></span><span class="sig-name descname"><span class="pre">TodoDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.todo.TodoDB" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.models.base.BaseModel" title="app.models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.additional_info">
+<span class="sig-name descname"><span class="pre">additional_info</span></span><a class="headerlink" href="#app.models.todo.TodoDB.additional_info" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.birthday">
+<span class="sig-name descname"><span class="pre">birthday</span></span><a class="headerlink" href="#app.models.todo.TodoDB.birthday" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#app.models.todo.TodoDB.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><a class="headerlink" href="#app.models.todo.TodoDB.first_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app.models.todo.TodoDB.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><a class="headerlink" href="#app.models.todo.TodoDB.last_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.todo.TodoDB.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><a class="headerlink" href="#app.models.todo.TodoDB.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.models.users">
+<span id="app-models-users-module"></span><h2>app.models.users module<a class="headerlink" href="#module-app.models.users" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.models.users.UserDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.models.users.</span></span><span class="sig-name descname"><span class="pre">UserDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.users.UserDB" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.models.base.BaseModel" title="app.models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app.models.users.UserDB.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#app.models.users.UserDB.image" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><a class="headerlink" href="#app.models.users.UserDB.is_active" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.otp">
+<span class="sig-name descname"><span class="pre">otp</span></span><a class="headerlink" href="#app.models.users.UserDB.otp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#app.models.users.UserDB.password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#app.models.users.UserDB.role" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.salt">
+<span class="sig-name descname"><span class="pre">salt</span></span><a class="headerlink" href="#app.models.users.UserDB.salt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.models.users.UserDB.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#app.models.users.UserDB.username" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.models" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">app.models package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.models.base">app.models.base module</a><ul>
+<li><a class="reference internal" href="#app.models.base.BaseModel"><code class="docutils literal notranslate"><span class="pre">BaseModel</span></code></a><ul>
+<li><a class="reference internal" href="#app.models.base.BaseModel.id"><code class="docutils literal notranslate"><span class="pre">BaseModel.id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.models.todo">app.models.todo module</a><ul>
+<li><a class="reference internal" href="#app.models.todo.TodoDB"><code class="docutils literal notranslate"><span class="pre">TodoDB</span></code></a><ul>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.additional_info"><code class="docutils literal notranslate"><span class="pre">TodoDB.additional_info</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.birthday"><code class="docutils literal notranslate"><span class="pre">TodoDB.birthday</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.email"><code class="docutils literal notranslate"><span class="pre">TodoDB.email</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.first_name"><code class="docutils literal notranslate"><span class="pre">TodoDB.first_name</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.id"><code class="docutils literal notranslate"><span class="pre">TodoDB.id</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.last_name"><code class="docutils literal notranslate"><span class="pre">TodoDB.last_name</span></code></a></li>
+<li><a class="reference internal" href="#app.models.todo.TodoDB.phone_number"><code class="docutils literal notranslate"><span class="pre">TodoDB.phone_number</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.models.users">app.models.users module</a><ul>
+<li><a class="reference internal" href="#app.models.users.UserDB"><code class="docutils literal notranslate"><span class="pre">UserDB</span></code></a><ul>
+<li><a class="reference internal" href="#app.models.users.UserDB.id"><code class="docutils literal notranslate"><span class="pre">UserDB.id</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.image"><code class="docutils literal notranslate"><span class="pre">UserDB.image</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.is_active"><code class="docutils literal notranslate"><span class="pre">UserDB.is_active</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.otp"><code class="docutils literal notranslate"><span class="pre">UserDB.otp</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.password"><code class="docutils literal notranslate"><span class="pre">UserDB.password</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.role"><code class="docutils literal notranslate"><span class="pre">UserDB.role</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.salt"><code class="docutils literal notranslate"><span class="pre">UserDB.salt</span></code></a></li>
+<li><a class="reference internal" href="#app.models.users.UserDB.username"><code class="docutils literal notranslate"><span class="pre">UserDB.username</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="app.dependencies.html"
+                          title="previous chapter">app.dependencies package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="app.repositories.html"
+                          title="next chapter">app.repositories package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.models.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.repositories.html" title="app.repositories package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="app.dependencies.html" title="app.dependencies package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" >app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.models package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Yehor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.services package &#8212; fastapi 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.test package" href="app.test.html" />
+    <link rel="prev" title="app.schemas package" href="app.schemas.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.test.html" title="app.test package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.schemas.html" title="app.schemas package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.services package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="app-services-package">
+<h1>app.services package<a class="headerlink" href="#app-services-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-app.services.todos">
+<span id="app-services-todos-module"></span><h2>app.services.todos module<a class="headerlink" href="#module-app.services.todos" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.todos.</span></span><span class="sig-name descname"><span class="pre">TodoServices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.services.todos.TodoServices" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.create_new">
+<span class="sig-name descname"><span class="pre">create_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">todo_create</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.todo.TodoCreate" title="app.schemas.todo.TodoCreate"><span class="pre">TodoCreate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a></span></span><a class="headerlink" href="#app.services.todos.TodoServices.create_new" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#app.services.todos.TodoServices.delete" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.get_all_todos">
+<span class="sig-name descname"><span class="pre">get_all_todos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.services.todos.TodoServices.get_all_todos" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.get_by_id">
+<span class="sig-name descname"><span class="pre">get_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a></span></span><a class="headerlink" href="#app.services.todos.TodoServices.get_by_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.get_upcoming_birthdays">
+<span class="sig-name descname"><span class="pre">get_upcoming_birthdays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.todos.TodoServices.get_upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.search_contacts">
+<span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a></span></span><a class="headerlink" href="#app.services.todos.TodoServices.search_contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.todos.TodoServices.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">todo_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.todo.TodoUpdate" title="app.schemas.todo.TodoUpdate"><span class="pre">TodoUpdate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a></span></span><a class="headerlink" href="#app.services.todos.TodoServices.update" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.services.users">
+<span id="app-services-users-module"></span><h2>app.services.users module<a class="headerlink" href="#module-app.services.users" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.users.UserServices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.users.</span></span><span class="sig-name descname"><span class="pre">UserServices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.services.users.UserServices" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.users.UserServices.activate_user">
+<span class="sig-name descname"><span class="pre">activate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.UserActivation" title="app.schemas.user.UserActivation"><span class="pre">UserActivation</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.services.users.UserServices.activate_user" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The activate_user function is used to activate a user.</dt><dd><dl class="simple">
+<dt>post:</dt><dd><p>description: Activate a user by providing the OTP sent to their email address.
+requestBody:  # This is where you define the payload of your request body, if any. If there’s no payload, omit this section entirely!</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>data</strong> – UserActivation: Pass the data to the function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.users.UserServices.create_new">
+<span class="sig-name descname"><span class="pre">create_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.services.users.UserServices.create_new" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The create_new function creates a new user in the database.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>self (UserRepo): The UserRepo object that is calling this function.
+user (User): A User object to be created in the database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>user</strong> – User: Pass the user object to the function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new user</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.users.UserServices.get_by_username">
+<span class="sig-name descname"><span class="pre">get_by_username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.services.users.UserServices.get_by_username" title="Link to this definition">¶</a></dt>
+<dd><p>The get_by_username function takes in a username and returns the user object associated with that username.
+If no such user exists, it raises an HTTPException.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>username</strong> – str: Specify the type of data that is expected to be passed into the function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.users.UserServices.get_user_for_auth">
+<span class="sig-name descname"><span class="pre">get_user_for_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.services.users.UserServices.get_user_for_auth" title="Link to this definition">¶</a></dt>
+<dd><p>The get_user_for_auth function is used to authenticate a user.
+It takes in the username and password of the user, and returns a User object if authentication was successful.
+If authentication fails, it raises an HTTPException with status code 403.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of a class</p></li>
+<li><p><strong>username</strong> – str: Get the username from the request body,</p></li>
+<li><p><strong>password</strong> – str: Check the password against the user’s hashed password</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.users.UserServices.set_image">
+<span class="sig-name descname"><span class="pre">set_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.services.users.UserServices.set_image" title="Link to this definition">¶</a></dt>
+<dd><p>The set_image function takes in a user and an image url.
+It then sets the user’s image to the given url, updates it in the database,
+and returns a User object with all of its attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of a class</p></li>
+<li><p><strong>user</strong> – User: Pass in the user object to be updated</p></li>
+<li><p><strong>url</strong> – str: Set the image url for a user</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.services">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.services" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">app.services package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.services.todos">app.services.todos module</a><ul>
+<li><a class="reference internal" href="#app.services.todos.TodoServices"><code class="docutils literal notranslate"><span class="pre">TodoServices</span></code></a><ul>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.create_new"><code class="docutils literal notranslate"><span class="pre">TodoServices.create_new()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.delete"><code class="docutils literal notranslate"><span class="pre">TodoServices.delete()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.get_all_todos"><code class="docutils literal notranslate"><span class="pre">TodoServices.get_all_todos()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.get_by_id"><code class="docutils literal notranslate"><span class="pre">TodoServices.get_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.get_upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">TodoServices.get_upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.search_contacts"><code class="docutils literal notranslate"><span class="pre">TodoServices.search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.todos.TodoServices.update"><code class="docutils literal notranslate"><span class="pre">TodoServices.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.services.users">app.services.users module</a><ul>
+<li><a class="reference internal" href="#app.services.users.UserServices"><code class="docutils literal notranslate"><span class="pre">UserServices</span></code></a><ul>
+<li><a class="reference internal" href="#app.services.users.UserServices.activate_user"><code class="docutils literal notranslate"><span class="pre">UserServices.activate_user()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.users.UserServices.create_new"><code class="docutils literal notranslate"><span class="pre">UserServices.create_new()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.users.UserServices.get_by_username"><code class="docutils literal notranslate"><span class="pre">UserServices.get_by_username()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.users.UserServices.get_user_for_auth"><code class="docutils literal notranslate"><span class="pre">UserServices.get_user_for_auth()</span></code></a></li>
+<li><a class="reference internal" href="#app.services.users.UserServices.set_image"><code class="docutils literal notranslate"><span class="pre">UserServices.set_image()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.services">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="app.schemas.html"
+                          title="previous chapter">app.schemas package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="app.test.html"
+                          title="next chapter">app.test package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.services.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.test.html" title="app.test package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="app.schemas.html" title="app.schemas package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" >app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.services package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Yehor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

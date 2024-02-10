@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from sqlalchemy import and_, extract
 from fastapi import HTTPException
-from models.todo import TodoDB
+from app.models.todo import TodoDB
 
 
 class TodoRepo():

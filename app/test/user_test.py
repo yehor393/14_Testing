@@ -1,9 +1,10 @@
 from unittest.mock import patch
 
-from services.users import UserServices
-from schemas.user import User, RolesEnum, UserActivation
+from app.repositories.user import UserRepo
+from app.services.users import UserServices
+from app.schemas.user import User, RolesEnum, UserActivation
 
-from models.users import UserDB
+from app.models.users import UserDB
 
 
 def test_create_success(default_user, mock_db):
@@ -73,3 +74,22 @@ def test_activation_not_success(activation_data, mock_db):
         result = user_service.activate_user(activation_data)
         assert result.is_active is False
         mock_repo.return_value.update.assert_not_called()
+
+
+def test_update_user(default_user, admin_user, mock_db):
+    with patch('app.repositories.user.UserRepo') as mock_repo:
+        mock_db.query.return_value.filter.return_value.delete.return_value = None
+        mock_repo.return_value.create.return_value = admin_user
+
+        user_service = UserRepo(mock_db)
+
+        updated_user = user_service.update(default_user)
+
+        mock_db.query.assert_called_with(UserDB)
+        # mock_db.query.return_value.filter.assert_called_with(updated_user == default_user)
+        mock_db.query.return_value.filter.return_value.delete.assert_called_once()
+
+        # mock_repo.return_value.create.assert_called_with(default_user)
+
+        assert updated_user.username == default_user.username
+        assert updated_user.role == default_user.role

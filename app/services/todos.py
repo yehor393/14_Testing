@@ -1,6 +1,6 @@
 from fastapi import HTTPException
-from repositories.todos import TodoRepo
-from schemas.todo import Todo, TodoCreate, TodoUpdate
+from app.repositories.todos import TodoRepo
+from app.schemas.todo import Todo, TodoCreate, TodoUpdate
 
 
 class TodoServices():

@@ -1,4 +1,4 @@
-from dependencies.database import Base
+from app.dependencies.database import Base
 from sqlalchemy import Column, Integer, String, DateTime
 
 

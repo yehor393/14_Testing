@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.api package &#8212; fastapi 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.dependencies package" href="app.dependencies.html" />
+    <link rel="prev" title="app package" href="app.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.dependencies.html" title="app.dependencies package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.html" title="app package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.api package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="app-api-package">
+<h1>app.api package<a class="headerlink" href="#app-api-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-app.api.todo_items">
+<span id="app-api-todo-items-module"></span><h2>app.api.todo_items module<a class="headerlink" href="#module-app.api.todo_items" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.create_todo">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">create_todo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">todo_item:</span> <span class="pre">~app.schemas.todo.TodoCreate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin:</span> <span class="pre">~app.schemas.user.User</span> <span class="pre">=</span> <span class="pre">Depends(check_is_admin)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.TodoCreate" title="app.schemas.todo.TodoCreate"><span class="pre">TodoCreate</span></a></span></span><a class="headerlink" href="#app.api.todo_items.create_todo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.delete_todo">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">delete_todo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#app.api.todo_items.delete_todo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.get_detail">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">get_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user:</span> <span class="pre">~app.schemas.user.User</span> <span class="pre">=</span> <span class="pre">Depends(check_is_default_user)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a></span></span><a class="headerlink" href="#app.api.todo_items.get_detail" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.get_upcoming_birthdays">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">get_upcoming_birthdays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.todo_items.get_upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.list_todos">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">list_todos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user:</span> <span class="pre">~app.schemas.user.User</span> <span class="pre">=</span> <span class="pre">Depends(check_is_default_user)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.api.todo_items.list_todos" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.search_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="app.schemas.html#app.schemas.todo.Todo" title="app.schemas.todo.Todo"><span class="pre">Todo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.api.todo_items.search_contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.todo_items.update_todo">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.todo_items.</span></span><span class="sig-name descname"><span class="pre">update_todo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">todo_item:</span> <span class="pre">~app.schemas.todo.TodoUpdate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.todo.TodoUpdate" title="app.schemas.todo.TodoUpdate"><span class="pre">TodoUpdate</span></a></span></span><a class="headerlink" href="#app.api.todo_items.update_todo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.api.users">
+<span id="app-api-users-module"></span><h2>app.api.users module<a class="headerlink" href="#module-app.api.users" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.activate">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data:</span> <span class="pre">~app.schemas.user.UserActivation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.activate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.check_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">check_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email_data:</span> <span class="pre">~app.schemas.user.Email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.check_email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.login_for_access_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">login_for_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form_data:</span> <span class="pre">~fastapi.security.oauth2.OAuth2PasswordRequestForm</span> <span class="pre">=</span> <span class="pre">Depends(NoneType)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.login_for_access_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.protected_resource">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">protected_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(rate_limit)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.protected_resource" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.rate_limit">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">rate_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.rate_limit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.register">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user:</span> <span class="pre">~app.schemas.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl=Depends(rate_limit)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.register" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.users.upload">
+<span class="sig-prename descclassname"><span class="pre">app.api.users.</span></span><span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_user:</span> <span class="pre">~app.schemas.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file:</span> <span class="pre">~fastapi.datastructures.UploadFile</span> <span class="pre">=</span> <span class="pre">File(Ellipsis)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uploader=Depends(get_uploader)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.users.upload" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.api" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">app.api package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.api.todo_items">app.api.todo_items module</a><ul>
+<li><a class="reference internal" href="#app.api.todo_items.create_todo"><code class="docutils literal notranslate"><span class="pre">create_todo()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.delete_todo"><code class="docutils literal notranslate"><span class="pre">delete_todo()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.get_detail"><code class="docutils literal notranslate"><span class="pre">get_detail()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.get_upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">get_upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.list_todos"><code class="docutils literal notranslate"><span class="pre">list_todos()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.search_contacts"><code class="docutils literal notranslate"><span class="pre">search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.todo_items.update_todo"><code class="docutils literal notranslate"><span class="pre">update_todo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.api.users">app.api.users module</a><ul>
+<li><a class="reference internal" href="#app.api.users.activate"><code class="docutils literal notranslate"><span class="pre">activate()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.check_email"><code class="docutils literal notranslate"><span class="pre">check_email()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.login_for_access_token"><code class="docutils literal notranslate"><span class="pre">login_for_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.protected_resource"><code class="docutils literal notranslate"><span class="pre">protected_resource()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.rate_limit"><code class="docutils literal notranslate"><span class="pre">rate_limit()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li><a class="reference internal" href="#app.api.users.upload"><code class="docutils literal notranslate"><span class="pre">upload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="app.html"
+                          title="previous chapter">app package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="app.dependencies.html"
+                          title="next chapter">app.dependencies package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.dependencies.html" title="app.dependencies package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="app.html" title="app package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" >app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.api package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Yehor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
