@@ -4,13 +4,17 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.models.base import BaseModel
 from app.schemas.user import User, RolesEnum, UserActivation
+from unittest.mock import MagicMock
 
 TEST_DATABASE_URL = "sqlite:///"
 
 
 @pytest.fixture
 def mock_db():
-    return {}
+    session_mock = MagicMock()
+    session_mock.query.return_value.filter.return_value.delete.return_value = None
+    session_mock.query.return_value.filter.return_value.first.return_value = None
+    return session_mock
 
 
 @pytest.fixture

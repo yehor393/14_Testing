@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.dependencies package &#8212; fastapi 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.models package" href="app.models.html" />
+    <link rel="prev" title="app.api package" href="app.api.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.models.html" title="app.models package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.api.html" title="app.api package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.dependencies package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="app-dependencies-package">
+<h1>app.dependencies package<a class="headerlink" href="#app-dependencies-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-app.dependencies.auth">
+<span id="app-dependencies-auth-module"></span><h2>app.dependencies.auth module<a class="headerlink" href="#module-app.dependencies.auth" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.dependencies.auth.Token">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">Token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'bearer'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.auth.Token" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.dependencies.auth.Token.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#app.dependencies.auth.Token.access_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.dependencies.auth.Token.token_type">
+<span class="sig-name descname"><span class="pre">token_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#app.dependencies.auth.Token.token_type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.check_is_admin">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">check_is_admin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.dependencies.auth.check_is_admin" title="Link to this definition">¶</a></dt>
+<dd><p>The check_is_admin function is a dependency that can be used to check if the user has admin privileges.
+It will raise an HTTPException with status code 403 (Forbidden) if the user does not have admin privileges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user</strong> – User: Get the user from the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The user object if the role is admin and the user is active</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.check_is_default_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">check_is_default_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.dependencies.auth.check_is_default_user" title="Link to this definition">¶</a></dt>
+<dd><p>The check_is_default_user function is a dependency that can be used to check if the user has the role of USER, MANAGER or ADMIN.
+It also checks if the user is active. If both conditions are met, it returns the current user object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user</strong> – User: Get the user object from the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object if the role is user, manager or admin and if the user is active</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.check_is_manager">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">check_is_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="app.schemas.html#app.schemas.user.User" title="app.schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#app.dependencies.auth.check_is_manager" title="Link to this definition">¶</a></dt>
+<dd><p>The check_is_manager function is a dependency that checks if the user has the role of manager or admin.
+If they do, then it returns their User object. If not, it raises an HTTPException with status code 403.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user</strong> – User: Pass the user object to the function</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object if the user is a manager or admin and has an active account</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.create_access_token">
+<span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">create_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.auth.create_access_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The create_access_token function creates a JWT token for the user.</dt><dd><dl class="simple">
+<dt>The token is created with the following data:</dt><dd><ul class="simple">
+<li><p>sub (subject): username of the user, which is used to identify them in our database.</p></li>
+<li><p>role: role of the user, which determines what they can do on our website.</p></li>
+<li><p>exp (expiration time): expiration time of 1 day from now.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> – str: Specify the username of the user that is logging in</p></li>
+<li><p><strong>role</strong> – str: Specify the role of the user</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A token</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.decode_jwt_token">
+<span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">decode_jwt_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.auth.decode_jwt_token" title="Link to this definition">¶</a></dt>
+<dd><p>The decode_jwt_token function takes a token as an argument and decodes it using the jwt.decode function.
+The decode_jwt_token function returns the decoded payload.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> – Decode the token</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decoded payload from the token</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.auth.get_current_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">Depends(OAuth2PasswordBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.auth.get_current_user" title="Link to this definition">¶</a></dt>
+<dd><p>The get_current_user function is a dependency that can be injected into any endpoint.
+It will decode the JWT token and return the user object if it exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> – str: Get the token from the request header</p></li>
+<li><p><strong>db</strong> – SessionLocal: Pass the database session to the function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-app.dependencies.cloudinary_client">
+<span id="app-dependencies-cloudinary-client-module"></span><h2>app.dependencies.cloudinary_client module<a class="headerlink" href="#module-app.dependencies.cloudinary_client" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.cloudinary_client.get_uploader">
+<span class="sig-prename descclassname"><span class="pre">app.dependencies.cloudinary_client.</span></span><span class="sig-name descname"><span class="pre">get_uploader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.cloudinary_client.get_uploader" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.dependencies.database">
+<span id="app-dependencies-database-module"></span><h2>app.dependencies.database module<a class="headerlink" href="#module-app.dependencies.database" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.database.get_db">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.database.</span></span><span class="sig-name descname"><span class="pre">get_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.database.get_db" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.dependencies.emails">
+<span id="app-dependencies-emails-module"></span><h2>app.dependencies.emails module<a class="headerlink" href="#module-app.dependencies.emails" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.dependencies.emails.send_email">
+<span class="sig-prename descclassname"><span class="pre">app.dependencies.emails.</span></span><span class="sig-name descname"><span class="pre">send_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.emails.send_email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.dependencies.rate_limiter">
+<span id="app-dependencies-rate-limiter-module"></span><h2>app.dependencies.rate_limiter module<a class="headerlink" href="#module-app.dependencies.rate_limiter" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.dependencies.rate_limiter.RateLimiter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.dependencies.rate_limiter.</span></span><span class="sig-name descname"><span class="pre">RateLimiter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_requests</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.rate_limiter.RateLimiter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.dependencies.rate_limiter.RateLimiter.is_allowed">
+<span class="sig-name descname"><span class="pre">is_allowed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.dependencies.rate_limiter.RateLimiter.is_allowed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.dependencies">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.dependencies" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">app.dependencies package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.dependencies.auth">app.dependencies.auth module</a><ul>
+<li><a class="reference internal" href="#app.dependencies.auth.Token"><code class="docutils literal notranslate"><span class="pre">Token</span></code></a><ul>
+<li><a class="reference internal" href="#app.dependencies.auth.Token.access_token"><code class="docutils literal notranslate"><span class="pre">Token.access_token</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.Token.token_type"><code class="docutils literal notranslate"><span class="pre">Token.token_type</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app.dependencies.auth.check_is_admin"><code class="docutils literal notranslate"><span class="pre">check_is_admin()</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.check_is_default_user"><code class="docutils literal notranslate"><span class="pre">check_is_default_user()</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.check_is_manager"><code class="docutils literal notranslate"><span class="pre">check_is_manager()</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.create_access_token"><code class="docutils literal notranslate"><span class="pre">create_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.decode_jwt_token"><code class="docutils literal notranslate"><span class="pre">decode_jwt_token()</span></code></a></li>
+<li><a class="reference internal" href="#app.dependencies.auth.get_current_user"><code class="docutils literal notranslate"><span class="pre">get_current_user()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.dependencies.cloudinary_client">app.dependencies.cloudinary_client module</a><ul>
+<li><a class="reference internal" href="#app.dependencies.cloudinary_client.get_uploader"><code class="docutils literal notranslate"><span class="pre">get_uploader()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.dependencies.database">app.dependencies.database module</a><ul>
+<li><a class="reference internal" href="#app.dependencies.database.get_db"><code class="docutils literal notranslate"><span class="pre">get_db()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.dependencies.emails">app.dependencies.emails module</a><ul>
+<li><a class="reference internal" href="#app.dependencies.emails.send_email"><code class="docutils literal notranslate"><span class="pre">send_email()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.dependencies.rate_limiter">app.dependencies.rate_limiter module</a><ul>
+<li><a class="reference internal" href="#app.dependencies.rate_limiter.RateLimiter"><code class="docutils literal notranslate"><span class="pre">RateLimiter</span></code></a><ul>
+<li><a class="reference internal" href="#app.dependencies.rate_limiter.RateLimiter.is_allowed"><code class="docutils literal notranslate"><span class="pre">RateLimiter.is_allowed()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.dependencies">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="app.api.html"
+                          title="previous chapter">app.api package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="app.models.html"
+                          title="next chapter">app.models package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.dependencies.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.models.html" title="app.models package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="app.api.html" title="app.api package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" >app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.dependencies package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Yehor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

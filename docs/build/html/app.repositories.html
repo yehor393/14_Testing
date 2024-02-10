@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.repositories package &#8212; fastapi 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.schemas package" href="app.schemas.html" />
+    <link rel="prev" title="app.models package" href="app.models.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.schemas.html" title="app.schemas package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.models.html" title="app.models package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.repositories package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="app-repositories-package">
+<h1>app.repositories package<a class="headerlink" href="#app-repositories-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-app.repositories.todos">
+<span id="app-repositories-todos-module"></span><h2>app.repositories.todos module<a class="headerlink" href="#module-app.repositories.todos" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.repositories.todos.</span></span><span class="sig-name descname"><span class="pre">TodoRepo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">todo_item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.create" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.delete" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.get_all">
+<span class="sig-name descname"><span class="pre">get_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="app.models.html#app.models.todo.TodoDB" title="app.models.todo.TodoDB"><span class="pre">TodoDB</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.repositories.todos.TodoRepo.get_all" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.get_by_id">
+<span class="sig-name descname"><span class="pre">get_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.get_by_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.get_upcoming_birthdays">
+<span class="sig-name descname"><span class="pre">get_upcoming_birthdays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.get_upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.search_contacts">
+<span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.search_contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.todos.TodoRepo.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">todo_update_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.todos.TodoRepo.update" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.repositories.user">
+<span id="app-repositories-user-module"></span><h2>app.repositories.user module<a class="headerlink" href="#module-app.repositories.user" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.repositories.user.</span></span><span class="sig-name descname"><span class="pre">UserRepo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo.create" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The create function creates a new user in the database.</dt><dd><p>It takes a User object as an argument and returns the newly created user.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>user</strong> – Create a new user</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new user object</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.generate_salt">
+<span class="sig-name descname"><span class="pre">generate_salt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo.generate_salt" title="Link to this definition">¶</a></dt>
+<dd><p>The generate_salt function generates a random string of characters to be used as the salt for hashing passwords.
+The function uses the os module’s urandom function to generate a 16 byte string, which is then converted into hexadecimal format and returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>self</strong> – Represent the instance of the class</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A random string of 16 bytes</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.get_by_username">
+<span class="sig-name descname"><span class="pre">get_by_username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo.get_by_username" title="Link to this definition">¶</a></dt>
+<dd><p>The get_by_username function is used to retrieve a user from the database by their username.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>username</strong> – Filter the query to find a user with that username</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first result of the query</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.get_user_and_check_pass">
+<span class="sig-name descname"><span class="pre">get_user_and_check_pass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo.get_user_and_check_pass" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>The get_user_and_check_pass function takes in a username and password,</dt><dd><p>hashes the password with the salt from the database, and compares it to
+what is stored in the database. If they match, then we return that user.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>username</strong> – Query the database for a user with that username</p></li>
+<li><p><strong>password</strong> – Check if the password entered by the user is correct</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A user object if the username and password match</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.hash_password">
+<span class="sig-name descname"><span class="pre">hash_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">salt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.repositories.user.UserRepo.hash_password" title="Link to this definition">¶</a></dt>
+<dd><p>The hash_password function takes a password and an optional salt as input.
+If no salt is provided, it generates one using the generate_salt function.
+It then concatenates the password with the salt and hashes them together using SHA256.
+The hashed password is returned along with its corresponding hex-encoded salt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Refer to the current instance of a class</p></li>
+<li><p><strong>password</strong> – Get the password from the user</p></li>
+<li><p><strong>salt</strong> – Generate a random salt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of the hashed password and salt</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.repositories.user.UserRepo.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.repositories.user.UserRepo.update" title="Link to this definition">¶</a></dt>
+<dd><p>The update function is used to update a user’s information in the database.
+It takes in a User object and updates the corresponding entry in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Represent the instance of the class</p></li>
+<li><p><strong>user</strong> – Update the user in the database</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The create function, which returns the user</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Trelent</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.repositories">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.repositories" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">app.repositories package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.repositories.todos">app.repositories.todos module</a><ul>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo"><code class="docutils literal notranslate"><span class="pre">TodoRepo</span></code></a><ul>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.create"><code class="docutils literal notranslate"><span class="pre">TodoRepo.create()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.delete"><code class="docutils literal notranslate"><span class="pre">TodoRepo.delete()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.get_all"><code class="docutils literal notranslate"><span class="pre">TodoRepo.get_all()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.get_by_id"><code class="docutils literal notranslate"><span class="pre">TodoRepo.get_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.get_upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">TodoRepo.get_upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.search_contacts"><code class="docutils literal notranslate"><span class="pre">TodoRepo.search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.todos.TodoRepo.update"><code class="docutils literal notranslate"><span class="pre">TodoRepo.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.repositories.user">app.repositories.user module</a><ul>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo"><code class="docutils literal notranslate"><span class="pre">UserRepo</span></code></a><ul>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.create"><code class="docutils literal notranslate"><span class="pre">UserRepo.create()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.generate_salt"><code class="docutils literal notranslate"><span class="pre">UserRepo.generate_salt()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.get_by_username"><code class="docutils literal notranslate"><span class="pre">UserRepo.get_by_username()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.get_user_and_check_pass"><code class="docutils literal notranslate"><span class="pre">UserRepo.get_user_and_check_pass()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.hash_password"><code class="docutils literal notranslate"><span class="pre">UserRepo.hash_password()</span></code></a></li>
+<li><a class="reference internal" href="#app.repositories.user.UserRepo.update"><code class="docutils literal notranslate"><span class="pre">UserRepo.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-app.repositories">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="app.models.html"
+                          title="previous chapter">app.models package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="app.schemas.html"
+                          title="next chapter">app.schemas package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.repositories.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.schemas.html" title="app.schemas package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="app.models.html" title="app.models package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">fastapi 1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" >app package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">app.repositories package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Yehor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
