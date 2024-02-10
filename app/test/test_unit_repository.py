@@ -1,9 +1,9 @@
 from unittest.mock import patch
 
-from app.services.users import UserServices
-from app.schemas.user import User, RolesEnum, UserActivation
+from services.users import UserServices
+from schemas.user import User, RolesEnum, UserActivation
 
-from app.models.users import UserDB
+from models.users import UserDB
 
 
 def test_create_success(default_user, mock_db):

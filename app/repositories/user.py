@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from app.models.users import UserDB
+from models.users import UserDB
 import hashlib
 import os
 

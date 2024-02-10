@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, File
-from app.dependencies.database import get_db, SessionLocal
-from app.dependencies.auth import Token, create_access_token, get_current_user, DefaultUser
-from app.dependencies.rate_limiter import RateLimiter
-from app.schemas.user import User, Email
-from app.services.users import UserServices
+from dependencies.database import get_db, SessionLocal
+from dependencies.auth import Token, create_access_token, get_current_user, DefaultUser
+from dependencies.rate_limiter import RateLimiter
+from schemas.user import User, Email
+from services.users import UserServices
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi import status
-from app.dependencies.emails import send_email
-from app.dependencies.cloudinary_client import get_uploader
+from dependencies.emails import send_email
+from dependencies.cloudinary_client import get_uploader
 
-from app.schemas.user import UserActivation
+from schemas.user import UserActivation
 
 router = APIRouter()
 

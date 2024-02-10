@@ -1,10 +1,10 @@
 from typing import Optional
 from fastapi import APIRouter, Depends
-from app.schemas.todo import Todo, TodoCreate, TodoUpdate
-from app.schemas.user import User
-from app.dependencies.database import get_db, SessionLocal
-from app.services.todos import TodoServices
-from app.dependencies.auth import check_is_admin, check_is_manager, check_is_default_user
+from schemas.todo import Todo, TodoCreate, TodoUpdate
+from schemas.user import User
+from dependencies.database import get_db, SessionLocal
+from services.todos import TodoServices
+from dependencies.auth import check_is_admin, check_is_manager, check_is_default_user
 
 
 router = APIRouter()

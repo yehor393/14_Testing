@@ -2,8 +2,8 @@ import pytest
 from unittest.mock import patch
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.models.base import BaseModel
-from app.schemas.user import User, RolesEnum, UserActivation
+from models.base import BaseModel
+from schemas.user import User, RolesEnum, UserActivation
 
 TEST_DATABASE_URL = "sqlite:///"
 

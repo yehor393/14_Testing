@@ -1,11 +1,11 @@
 from fastapi import HTTPException
-from app.models.users import UserDB
-from app.repositories.user import UserRepo
-from app.schemas.user import User
+from models.users import UserDB
+from repositories.user import UserRepo
+from schemas.user import User
 from random import randint
-from app.dependencies.emails import send_email
+from dependencies.emails import send_email
 
-from app.schemas.user import UserActivation
+from schemas.user import UserActivation
 
 
 class UserServices():
