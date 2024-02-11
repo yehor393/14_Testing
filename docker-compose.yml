@@ -1,9 +1,44 @@
+# version: '3'
+# services:
+#   fastapi-app:
+#     build: 12_Auth_and_Auth
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - .:/app
+#     command: bash -c "python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
 version: '3'
 services:
-  fastapi-app:
-    build: 12_Auth_and_Auth
+  app:
+    build: .
+    # command: uvicorn app.main:app --host 0.0.0.0 --reload
+    volumes:
+      - .:/code
     ports:
       - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/dbname
+      - REDIS_URL=redis://redis:6379/0
+
+  db:
+    image: postgres:13
     volumes:
-      - .:/app
-    command: bash -c "python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+
+  redis:
+    image: redis:6
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
