@@ -12,3 +12,5 @@ cloudinary==1.38.0
 six==1.16.0
 urllib3==2.2.0
 python-dotenv==1.0.1
+aioredis==2.0.1
+aiofiles>=0.8.0

@@ -1,18 +1,31 @@
-# import urllib
+import aioredis
+from aioredis.exceptions import TimeoutError as RedisTimeoutError
+import asyncio
+from asyncio.exceptions import TimeoutError as AsyncioTimeoutError
+# from app.dependencies.redis_config import create_redis_pool
+
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+
 from app.api.todo_items import router as todo_router
 from app.api.users import router as user_router
 from app.services.users import UserServices
 from app.models import todo
 from app.dependencies.auth import create_access_token
 from app.dependencies.database import engine, SessionLocal, get_db
-# from fastapi_sso.sso.google import GoogleSSO
 from app.schemas.user import Email
+
+# from fastapi_sso.sso.google import GoogleSSO
 
 todo.BaseModel.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.include_router(user_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,10 +36,21 @@ app.add_middleware(
 app.include_router(todo_router, prefix="/todo")
 app.include_router(user_router, prefix="/users")
 
-GSSO_CLIENT_SECRET = "YOUR SECRET"
-GSSO_CLIENT_ID = "YOUR CLIENT ID"
+# GSSO_CLIENT_SECRET = "YOUR SECRET"
+# GSSO_CLIENT_ID = "YOUR CLIENT ID"
 
-REDIRECT_URI = "http://localhost:8000/google/callback"
+# REDIRECT_URI = "http://localhost:8000/google/callback"
+
+
+# @app.on_event("startup")
+# async def startup_event():
+#     # Створення та збереження Redis пулу у стані додатку
+#     app.state.redis_pool = await create_redis_pool()
+
+# @app.on_event("shutdown")
+# async def shutdown_event():
+#     # Закриття Redis пулу
+#     await app.state.redis_pool.close()
 
 
 @app.get("/")
