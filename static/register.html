@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+</head>
+<body>
+    <h2>Register User</h2>
+    <form action="http://localhost:8000/users/register/" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="role">Role:</label><br>
+        <input type="text" id="role" name="role" required><br>
+        <label for="otp">OTP:</label><br>
+        <input type="text" id="otp" name="otp"><br>
+        <label for="image">Image:</label><br>
+        <input type="text" id="image" name="image"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

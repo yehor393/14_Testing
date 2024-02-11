@@ -1,15 +1,20 @@
+import aioredis
+
+from fastapi import status
+from fastapi.security import OAuth2PasswordRequestForm
 from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, File
+
 from app.dependencies.database import get_db, SessionLocal
 from app.dependencies.auth import Token, create_access_token, get_current_user, DefaultUser
 from app.dependencies.rate_limiter import RateLimiter
 from app.schemas.user import User, Email
 from app.services.users import UserServices
-from fastapi.security import OAuth2PasswordRequestForm
-from fastapi import status
 from app.dependencies.emails import send_email
 from app.dependencies.cloudinary_client import get_uploader
-
 from app.schemas.user import UserActivation
+
+from starlette.responses import FileResponse
+
 
 router = APIRouter()
 
@@ -24,6 +29,9 @@ async def rate_limit(request: Request):
         raise HTTPException(status_code=429, detail="Too Many Requests")
     return True
 
+@router.get("/users/register/")
+async def get_register_page():
+    return FileResponse('static/register.html')
 
 @router.post("/register/", response_model=User, status_code=status.HTTP_201_CREATED)
 async def register(user: User,
